@@ -1,133 +1,138 @@
-{
- "name": "Peter Quill",
- "meta":{
-	"type":"character",
-    "id":"716143"
- },
- "children": [
-  {
-   "name": "Characters",
-	"meta":{
-		"isType":true,
-		"locked" :true
+{"name": "Peter Quill", "meta": {
+	"type": "character",
+	"id": "716143"
+}, "children": [
+	{
+		"name": "Characters",
+		"meta": {
+			"isType": true,
+			"locked": true
+		},
+		"children": [
+			{
+				"name": "Gamora",
+				"meta": {
+					"relation": "Characters > Friends",
+					"type": "character",
+					"id": "714605",
+					"img": "http:\/\/img2.wikia.nocookie.net\/__cb20140720030528\/marveldatabase\/images\/thumb\/4\/4a\/Gamora_%28Earth-199999%29_002.jpg\/200px-0%2C1714%2C0%2C1714-Gamora_%28Earth-199999%29_002.jpg"
+				}
+			},
+			{
+				"name": "Rocket",
+				"meta": {
+					"relation": "Characters > Friends",
+					"type": "character",
+					"id": "716136",
+					"img": "http:\/\/img2.wikia.nocookie.net\/__cb20140731154406\/marveldatabase\/images\/thumb\/d\/d5\/89P13_%28Earth-199999%29_003.jpg\/200px-0%2C300%2C0%2C300-89P13_%28Earth-199999%29_003.jpg"
+				}
+			},
+			{
+				"name": "Groot",
+				"meta": {
+					"relation": "Characters > Friends",
+					"type": "character",
+					"id": "716129",
+					"img": "http:\/\/img3.wikia.nocookie.net\/__cb20140731154514\/marveldatabase\/images\/thumb\/0\/0b\/Groot_%28Earth-199999%29_004.jpg\/200px-0%2C300%2C0%2C300-Groot_%28Earth-199999%29_004.jpg"
+				}
+			},
+			{
+				"name": "Arthur Douglas",
+				"meta": {
+					"relation": "Characters > Friends",
+					"type": "character",
+					"id": "716130",
+					"img": "http:\/\/img1.wikia.nocookie.net\/__cb20140628050824\/marveldatabase\/images\/thumb\/a\/ab\/Drax_the_Destroyer_%28Earth-199999%29_002.jpg\/200px-0%2C300%2C0%2C300-Drax_the_Destroyer_%28Earth-199999%29_002.jpg"
+				}
+			},
+			{
+				"name": "Nebula",
+				"meta": {
+					"relation": "Characters > Enemies",
+					"type": "character",
+					"id": "714606",
+					"img": "http:\/\/img2.wikia.nocookie.net\/__cb20140803101249\/marveldatabase\/images\/thumb\/8\/8d\/Nebula_%28Earth-199999%29.jpg\/200px-0%2C1714%2C0%2C1714-Nebula_%28Earth-199999%29.jpg"
+				}
+			},
+			{
+				"name": "Ronan",
+				"meta": {
+					"relation": "Characters > Enemies",
+					"type": "character",
+					"id": "716128",
+					"img": "http:\/\/img1.wikia.nocookie.net\/__cb20140803132619\/marveldatabase\/images\/thumb\/a\/a7\/Ronan_%28Earth-199999%29_002.jpg\/200px-0%2C300%2C0%2C300-Ronan_%28Earth-199999%29_002.jpg"
+				}
+			},
+			{
+				"name": "Thanos",
+				"meta": {
+					"relation": "Characters > Friends",
+					"type": "character",
+					"id": "522590",
+					"img": "http:\/\/img2.wikia.nocookie.net\/__cb20140801190734\/marveldatabase\/images\/thumb\/9\/9c\/Thanos_%28Earth-199999%29_004.jpg\/200px-0%2C528%2C0%2C528-Thanos_%28Earth-199999%29_004.jpg"
+				}
+			}
+		]
 	},
-   "children": [
-	    {
-	     "name": "Gamora",
-		 "meta":{
-			 "relation":"Characters > Friends",
-			 "type":"character",
-			 "id":"714605"
-		 }
-	    },
-	   {
-		   "name": "Rocket",
-		   "meta":{
-			   "relation":"Characters > Friends",
-			   "type":"character",
-			   "id":"716136"
-		   }
-	   },
-	   {
-		   "name": "Groot",
-		   "meta":{
-			   "relation":"Characters > Friends",
-			   "type":"character",
-			   "id":"716129"
-		   }
-	   },
-	   {
-		   "name": "Arthur Douglas",
-		   "meta":{
-			   "relation":"Characters > Friends",
-			   "type":"character",
-			   "id":"716130"
-		   }
-	   },
-
-	   {
-		   "name": "Nebula",
-		   "meta":{
-			   "relation":"Characters > Enemies",
-			   "type":"character",
-			   "id":"714606"
-		   }
-	   },
-	   {
-		   "name": "Ronan",
-		   "meta":{
-			   "relation":"Characters > Enemies",
-			   "type":"character",
-			   "id":"716128"
-		   }
-	   },
-	   {
-		   "name": "Thanos",
-		   "meta":{
-			   "relation":"Characters > Friends",
-			   "type":"character",
-			   "id":"522590"
-		   }
-	   }
-
-   ]
-  },
-	 {
-		 "name": "Equipment",
-		 "meta":{
-			 "locked" :true
-		 },
-		 "children": [
-			 {
-				 "name": "Element Gun",
-				 "meta":{
-					 "relation":"Equipment > Weapon",
-					 "type":"weapon",
-					 "id":"586548"
-				 }
-			 },
-			 {
-				 "name": "Guardians of the Galaxy: Awesome Mix Vol. 1",
-				 "meta":{
-					 "relation":"Equipment > Weapon",
-					 "type":"weapon",
-					 "id":"2233"
-				 }
-			 },
-			 {
-				 "name": "Translator Implant",
-				 "meta":{
-					 "relation":"Equipment > Weapon",
-					 "type":"weapon",
-					 "id":"750637"
-				 }
-			 }
-		 ]
-	 },
-	 {
-		 "name": "Actors",
-		 "meta":{
-			 "locked" :true
-		 },
-		 "children": [
-			 {
-				 "name": "Steve Englehart",
-				 "meta":{
-					 "relation":"Actors > Created by",
-					 "type":"character",
-					 "id":"35496"
-				 }
-			 },
-			 {
-				 "name": "Steve Gan",
-				 "meta":{
-					 "relation":"Actors > Created by",
-					 "type":"character",
-					 "id":"439809"
-				 }
-			 }
-		 ]
-	 }
-
- ]
-}
+	{
+		"name": "Equipment",
+		"meta": {
+			"locked": true
+		},
+		"children": [
+			{
+				"name": "Element Gun",
+				"meta": {
+					"relation": "Equipment > Weapon",
+					"type": "weapon",
+					"id": "586548",
+					"img": "http:\/\/img4.wikia.nocookie.net\/__cb20140626202558\/marveldatabase\/images\/thumb\/d\/d7\/Element_Gun_from_Guardians_of_the_Galaxy_Vol_3_16_001.jpg\/200px-92%2C310%2C0%2C217-Element_Gun_from_Guardians_of_the_Galaxy_Vol_3_16_001.jpg"
+				}
+			},
+			{
+				"name": "Guardians of the Galaxy: Awesome Mix Vol. 1",
+				"meta": {
+					"relation": "Equipment > Weapon",
+					"type": "weapon",
+					"id": "2233",
+					"img": null
+				}
+			},
+			{
+				"name": "Translator Implant",
+				"meta": {
+					"relation": "Equipment > Weapon",
+					"type": "weapon",
+					"id": "750637",
+					"img": null
+				}
+			}
+		]
+	},
+	{
+		"name": "Actors",
+		"meta": {
+			"locked": true
+		},
+		"children": [
+			{
+				"name": "Steve Englehart",
+				"meta": {
+					"relation": "Actors > Created by",
+					"type": "character",
+					"id": "35496",
+					"img": "http:\/\/img4.wikia.nocookie.net\/__cb20090719224620\/marveldatabase\/images\/thumb\/c\/cf\/Steve_Englehart_01.jpg\/200px-0%2C708%2C0%2C708-Steve_Englehart_01.jpg"
+				}
+			},
+			{
+				"name": "Steve Gan",
+				"meta": {
+					"relation": "Actors > Created by",
+					"type": "character",
+					"id": "439809",
+					"img": null
+				}
+			}
+		]
+	}
+]}
