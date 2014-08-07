@@ -1,7 +1,7 @@
 /**
  * Created by krzychu on 07.08.14.
  */
-treeJSON = d3.json("flare.json", function (error, treeData) {
+treeJSON = d3.json("flare.json", function(error, treeData) {
 
 	// Calculate total nodes, max label length
 	var totalNodes = 0;
@@ -56,6 +56,7 @@ treeJSON = d3.json("flare.json", function (error, treeData) {
 
 
 	// sort the tree according to the node names
+
 	function sortTree() {
 		tree.sort(function (a, b) {
 			return b.name.toLowerCase() < a.name.toLowerCase() ? 1 : -1;
