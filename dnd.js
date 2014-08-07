@@ -406,8 +406,9 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 			});
 
 		nodeEnter.append('image')
-			//TODO get it from json
-			.attr('xlink:href', 'ironman.jpg')
+			.attr('xlink:href', function (d) {
+				return d.meta.img;
+			})
 			.attr('x', 5)
 			.attr('y', 5)
 			.attr('width', tileImageWidth)
