@@ -384,7 +384,19 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
 			.attr("width", tileWidth)
 			.attr("height", tileHeight)
 			.style("fill", function (d) {
-				return d._children ? "lightsteelblue" : "#000";
+				return d._children ? "lightsteelblue" : "#fff";
+			});
+
+		nodeEnter.append('text')
+			.attr('class', 'nodeText')
+			.attr('x', 5)
+			.attr('y', 15)
+			.attr('text-anchor', 'start')
+			.text(function (d) {
+				if (d.name.length > 15) {
+					return d.name.slice(0, 15) + '...';
+				}
+				return d.name;
 			});
 
 		/*nodeEnter.append("text")
@@ -415,24 +427,12 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
 				outCircle(node);
 			});*/
 
-		// Update the text to reflect whether node has children or not.
-		node.select('text')
-			.attr("x", function (d) {
-				return d.children || d._children ? -10 : 10;
-			})
-			.attr("text-anchor", function (d) {
-				return d.children || d._children ? "end" : "start";
-			})
-			.text(function (d) {
-				return d.name;
-			});
-
 		// Change the circle fill depending on whether it has children and is collapsed
-		node.select("circle.nodeCircle")
+/*		node.select("circle.nodeCircle")
 			.attr("r", 4.5)
 			.style("fill", function (d) {
 				return d._children ? "lightsteelblue" : "#fff";
-			});
+			});*/
 
 		// Transition nodes to their new position.
 		var nodeUpdate = node.transition()
@@ -449,7 +449,7 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
 		var nodeExit = node.exit().transition()
 			.duration(duration)
 			.attr("transform", function (d) {
-				return "translate(" + source.y + "," + source.x + ")";
+				return "translate(" + source.x + "," + source.y + ")";
 			})
 			.remove();
 
