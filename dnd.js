@@ -1,6 +1,3 @@
-/**
- * Created by krzychu on 07.08.14.
- */
 treeJSON = d3.json("flare.json", function(error, treeData) {
 
 	// Calculate total nodes, max label length
@@ -11,13 +8,16 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
 	var draggingNode = null;
 	// panning variables
 	var panSpeed = 200;
-	var panBoundary = 20; // Within 20px from edges will pan when dragging.
+	// Within 20px from edges will pan when dragging.
+	var panBoundary = 20;
 	// Misc. variables
 	var i = 0;
 	var duration = 750;
 	var root;
 	var tileWidth = 100;
-	var tileHeight = 150;
+	var tileHeight = 120;
+	var tileImageWidth = 90;
+	var tileImageHeight = 90;
 
 	// size of the diagram
 	var viewerWidth = $(document).width();
@@ -396,7 +396,7 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
 		nodeEnter.append('text')
 			.attr('class', 'nodeText')
 			.attr('x', 5)
-			.attr('y', 15)
+			.attr('y', 110)
 			.attr('text-anchor', 'start')
 			.text(function (d) {
 				if (d.name.length > 15) {
@@ -404,6 +404,14 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
 				}
 				return d.name;
 			});
+
+		nodeEnter.append('image')
+			//TODO get it from json
+			.attr('xlink:href', 'ironman.jpg')
+			.attr('x', 5)
+			.attr('y', 5)
+			.attr('width', tileImageWidth)
+			.attr('height', tileImageHeight);
 
 		/*nodeEnter.append("text")
 			.attr("x", function (d) {
