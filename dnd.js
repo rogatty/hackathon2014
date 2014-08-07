@@ -1,11 +1,7 @@
-/**
- * Created by krzychu on 07.08.14.
- */
 treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 
-	// Calculate total nodes, max label length
+	// Calculate total nodes
 	var totalNodes = 0;
-	var maxLabelLength = 0;
 	// variables for drag/drop
 	var selectedNode = null;
 	var draggingNode = null;
@@ -157,18 +153,20 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 	// Define the drag listeners for drag/drop behaviour of nodes.
 	dragListener = d3.behavior.drag()
 		.on("dragstart", function (d) {
-			if (d == root) {
+			if (d == root || (d.meta && d.meta.locked)) {
 				return;
 			}
+
 			dragStarted = true;
 			nodes = tree.nodes(d);
 			d3.event.sourceEvent.stopPropagation();
 			// it's important that we suppress the mouseover event on the node being dragged. Otherwise it will absorb the mouseover event and the underlying node will not detect it d3.select(this).attr('pointer-events', 'none');
 		})
 		.on("drag", function (d) {
-			if (d == root) {
+			if (d == root || (d.meta && d.meta.locked)) {
 				return;
 			}
+
 			if (dragStarted) {
 				domNode = this;
 				initiateDrag(d, domNode);
@@ -180,7 +178,6 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 				panTimer = true;
 				pan(this, 'left');
 			} else if (relCoords[0] > ($('svg').width() - panBoundary)) {
-
 				panTimer = true;
 				pan(this, 'right');
 			} else if (relCoords[1] < panBoundary) {
