@@ -1,9 +1,3 @@
-<?php
-header("Access-Control-Allow-Origin: http://marvel.wikia.com");
-header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
-header("Access-Control-Allow-Headers: X-PINGOTHER");
-header("Access-Control-Max-Age: 1728000");
-?>
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style type="text/css">
@@ -12,8 +6,8 @@ header("Access-Control-Max-Age: 1728000");
 		cursor: pointer;
 	}
 
-	.overlay{
-		background-color:#EEE;
+	.overlay {
+		background-color: #EEE;
 	}
 
 	.node rect {
@@ -23,8 +17,9 @@ header("Access-Control-Max-Age: 1728000");
 	}
 
 	.node text {
-		font-size:10px;
-		font-family:sans-serif;
+		font-size: 11px;
+		font-family: Helvetica Neue, Helvetica, Arial;
+		font-weight: bold;
 	}
 
 	.link {
@@ -39,11 +34,11 @@ header("Access-Control-Max-Age: 1728000");
 		stroke-width: 3px;
 	}
 
-	.ghostCircle.show{
-		display:block;
+	.ghostCircle.show {
+		display: block;
 	}
 
-	.ghostCircle, .activeDrag .ghostCircle{
+	.ghostCircle, .activeDrag .ghostCircle {
 		display: none;
 	}
 

@@ -383,9 +383,8 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 			.attr('class', 'nodeCircle')
 			.attr("width", tileWidth)
 			.attr("height", tileHeight)
-			.style("fill", function (d) {
-				return d._children ? "lightsteelblue" : "#fff";
-			}).attr('pointer-events', 'mouseover')
+			.attr('pointer-events', 'mouseover')
+			.style("fill", "#fff")
 			.on("mouseover", function (node) {
 				overCircle(node);
 			})
