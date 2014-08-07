@@ -277,12 +277,12 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
 			// have to flip the source coordinates since we did this for the existing connectors on the original tree
 			data = [{
 				source: {
-					x: selectedNode.y0,
-					y: selectedNode.x0
+					y: selectedNode.y0,
+					x: selectedNode.x0
 				},
 				target: {
-					x: draggingNode.y0,
-					y: draggingNode.x0
+					y: draggingNode.y0,
+					x: draggingNode.x0
 				}
 			}];
 		}
@@ -302,15 +302,15 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
 
 	function centerNode(source) {
 		scale = zoomListener.scale();
-		x = -source.y0;
-		y = -source.x0;
+		y = -source.y0;
+		x = -source.x0;
 		x = x * scale + viewerWidth / 2;
 		y = y * scale + viewerHeight / 2;
 		d3.select('g').transition()
 			.duration(duration)
 			.attr("transform", "translate(" + x + "," + y + ")scale(" + scale + ")");
 		zoomListener.scale(scale);
-		zoomListener.translate([y, x]);
+		zoomListener.translate([x, y]);
 	}
 
 	// Toggle children function
@@ -385,6 +385,12 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
 			.attr("height", tileHeight)
 			.style("fill", function (d) {
 				return d._children ? "lightsteelblue" : "#fff";
+			}).attr('pointer-events', 'mouseover')
+			.on("mouseover", function (node) {
+				overCircle(node);
+			})
+			.on("mouseout", function (node) {
+				outCircle(node);
 			});
 
 		nodeEnter.append('text')
@@ -473,9 +479,13 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
 					x: source.x0,
 					y: source.y0
 				};
+				var o2 = {
+					x: source.x0+100,
+					y: source.y0+100
+				};
 				return diagonal({
 					source: o,
-					target: o
+					target: o2
 				});
 			});
 
@@ -492,9 +502,13 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
 					x: source.x,
 					y: source.y
 				};
+				var o2 = {
+					x: source.x+100,
+					y: source.y+100
+				};
 				return diagonal({
 					source: o,
-					target: o
+					target: o2
 				});
 			})
 			.remove();
