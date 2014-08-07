@@ -196,10 +196,10 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
 				}
 			}
 
-			d.x0 += d3.event.dy;
-			d.y0 += d3.event.dx;
+			d.x0 += d3.event.dx;
+			d.y0 += d3.event.dy;
 			var node = d3.select(this);
-			node.attr("transform", "translate(" + d.y0 + "," + d.x0 + ")");
+			node.attr("transform", "translate(" + d.x0 + "," + d.y0 + ")");
 			updateTempConnector();
 		}).on("dragend", function(d) {
 			if (d == root) {
@@ -312,7 +312,7 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
 			.duration(duration)
 			.attr("transform", "translate(" + x + "," + y + ")scale(" + scale + ")");
 		zoomListener.scale(scale);
-		zoomListener.translate([x, y]);
+		zoomListener.translate([y, x]);
 	}
 
 	// Toggle children function
@@ -354,18 +354,19 @@ treeJSON = d3.json("flare.json", function(error, treeData) {
 			}
 		};
 		childCount(0, root);
-		var newHeight = d3.max(levelWidth) * 25; // 25 pixels per line
+		var newHeight = d3.max(levelWidth) * 10; // 10 pixels per line
 		tree = tree.size([newHeight, viewerWidth]);
 
 		// Compute the new tree layout.
 		var nodes = tree.nodes(root).reverse(),
 			links = tree.links(nodes);
-
+		console.log(nodes)
+		//console.log(links)
 		// Set widths between levels based on maxLabelLength.
 		nodes.forEach(function(d) {
 			d.y = (d.depth * (maxLabelLength * 10)); //maxLabelLength * 10px
-			d.x = d.x*3
-			console.log(d)
+			d.x = d.x*5
+			//console.log(d)
 			// alternatively to keep a fixed scale one can set a fixed depth per level
 			// Normalize for fixed-depth by commenting out below line
 			// d.y = (d.depth * 500); //500px per level.
