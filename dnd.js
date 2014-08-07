@@ -1,4 +1,7 @@
-treeJSON = d3.json("flare.json", function(error, treeData) {
+/**
+ * Created by krzychu on 07.08.14.
+ */
+treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 
 	// Calculate total nodes, max label length
 	var totalNodes = 0;
