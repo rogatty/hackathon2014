@@ -331,20 +331,29 @@ treeJSON = d3.json("data/PeterQuill.json", function(error, treeData) {
 
 	function click(d) {
 		if (d3.event.defaultPrevented) return; // click suppressed
+
+		if (d.meta.add) {
+			$('#searchModal').reveal();
+			return;
+		}
 		d = toggleChildren(d);
 		update(d);
 		centerNode(d);
 	}
 
 	function addCreationTiles(root) {
+		var addTile = {
+			name: 'Add',
+			meta: {
+				add: true,
+				img: 'images/create.png'
+			}
+		};
 		root.children.forEach(function (relationNode) {
-			relationNode.children.push({
-				name: 'Create new',
-				meta: {
-					img: 'images/create.png'
-				}
-			});
+			relationNode.children.push($.extend({}, addTile));
 		});
+
+		root.children.push($.extend({}, addTile));
 	}
 
 	function update(source) {

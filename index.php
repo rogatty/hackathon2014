@@ -43,15 +43,19 @@
 	}
 
 </style>
-<script src="jquery-1.10.2.min.js"></script>
-<script src="select/select2.js"></script>
-<script src="d3.min.js"></script>
-<script src="dnd.js"></script>
+<link rel="stylesheet" href="styles/reveal.css">
+<script src="scripts/jquery-1.10.2.min.js"></script>
+<script src="scripts/d3.min.js"></script>
+<script src="scripts/dnd.js"></script>
+<script src="scripts/select/select2.js"></script>
+<script src="scripts/jquery.reveal.js"></script>
+<script src="scripts/search.js"></script>
 <body>
-<div id="myselect" style="width:400px">
-</div>
-<script src="search.js"></script>
-
 <div id="tree-container"></div>
+<div id="searchModal" class="reveal-modal">
+	<h1>Add</h1>
+	<div id="myselect" style="width:400px"></div>
+	<a class="close-reveal-modal">&#215;</a>
+</div>
 </body>
 </html>
