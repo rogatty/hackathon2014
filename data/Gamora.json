@@ -1,0 +1,57 @@
+{
+	"name": "Gamora",
+	"meta": {
+		"type": "character",
+		"id": "716143",
+		"img": "http://img1.wikia.nocookie.net/__cb20130612214135/marveldatabase/images/thumb/1/11/Guardians_of_the_Galaxy_Vol_3_4_Campbell_Variant_Textless.jpg/200px-0%2C778%2C0%2C778-Guardians_of_the_Galaxy_Vol_3_4_Campbell_Variant_Textless.jpg",
+		"locked": true
+	}, "children": [
+	{
+		"name": "Family",
+		"meta": {
+			"isType": true,
+			"locked": true,
+			"img": "images/family.png"
+		},"children": []
+
+	},
+	{
+		"name": "Created by",
+		"meta": {
+			"isType": true,
+			"locked": true,
+			"img": "images/created-by.png"
+		},"children": []
+
+	},
+	{
+		"name": "Actor",
+		"meta": {
+			"isType": true,
+			"locked": true,
+			"img": "images/actor.png"
+		},"children": []
+
+	},
+	{
+		"name": "Friends",
+		"meta": {
+			"isType": true,
+			"locked": true,
+			"img": "images/friends.png"
+		},"children": []
+
+	},
+	{
+		"name": "Movies",
+		"meta": {
+			"isType": true,
+			"locked": true,
+			"img": "images/movie.png"
+		},"children": []
+
+	},
+
+
+]
+}

@@ -74,15 +74,18 @@ function initSearch() {
 		}).on("select2-selecting", function (x) {
 			x.preventDefault();
 			var obj = x.object.item
-			currentNodeToAddTo.children.unshift({
-				"name": obj.title,
-				"meta":{
-					"type":"",
-					"id":obj.id,
-					"img":obj.img
-				}
-			})
+			if(currentNodeToAddTo){
+				currentNodeToAddTo.children.unshift({
+					"name": obj.title,
+					"meta":{
+						"type":"",
+						"id":obj.id,
+						"img":obj.img
+					}
+				})
+			}
 
+			currentNodeToAddTo = false;
 			$("#myselect").select2("close");
 			$('#searchModal').trigger('reveal:close');
 		});

@@ -6,12 +6,40 @@
 		"img": "http://img1.wikia.nocookie.net/__cb20140627005750/marveldatabase/images/thumb/d/dd/Peter_Quill_%28Earth-199999%29_002.jpg/200px-0%2C3558%2C0%2C3558-Peter_Quill_%28Earth-199999%29_002.jpg",
 		"locked": true
 	}, "children": [
+
 	{
-		"name": "Characters",
+		"name": "Enemies",
 		"meta": {
 			"isType": true,
 			"locked": true,
-			"img": "images/character.png"
+			"img": "images/miecz.png"
+		},"children": [{
+		"name": "Nebula",
+		"meta": {
+			"relation": "Characters > Enemies",
+			"type": "character",
+			"id": "714606",
+			"img": "http:\/\/img2.wikia.nocookie.net\/__cb20140803101249\/marveldatabase\/images\/thumb\/8\/8d\/Nebula_%28Earth-199999%29.jpg\/200px-0%2C1714%2C0%2C1714-Nebula_%28Earth-199999%29.jpg"
+		}
+	},
+		{
+			"name": "Ronan",
+			"meta": {
+				"relation": "Characters > Enemies",
+				"type": "character",
+				"id": "716128",
+				"img": "http:\/\/img1.wikia.nocookie.net\/__cb20140803132619\/marveldatabase\/images\/thumb\/a\/a7\/Ronan_%28Earth-199999%29_002.jpg\/200px-0%2C300%2C0%2C300-Ronan_%28Earth-199999%29_002.jpg"
+			}
+		}
+	]
+	},
+	{
+
+		"name": "Friends",
+		"meta": {
+			"isType": true,
+			"locked": true,
+			"img": "images/friends.png"
 		},
 		"children": [
 			{
@@ -20,6 +48,7 @@
 					"relation": "Characters > Friends",
 					"type": "character",
 					"id": "714605",
+					"url":"http://marvel.wikia.com/Gamora",
 					"img": "http:\/\/img2.wikia.nocookie.net\/__cb20140720030528\/marveldatabase\/images\/thumb\/4\/4a\/Gamora_%28Earth-199999%29_002.jpg\/200px-0%2C1714%2C0%2C1714-Gamora_%28Earth-199999%29_002.jpg"
 				}
 			},
@@ -50,24 +79,7 @@
 					"img": "http:\/\/img1.wikia.nocookie.net\/__cb20140628050824\/marveldatabase\/images\/thumb\/a\/ab\/Drax_the_Destroyer_%28Earth-199999%29_002.jpg\/200px-0%2C300%2C0%2C300-Drax_the_Destroyer_%28Earth-199999%29_002.jpg"
 				}
 			},
-			{
-				"name": "Nebula",
-				"meta": {
-					"relation": "Characters > Enemies",
-					"type": "character",
-					"id": "714606",
-					"img": "http:\/\/img2.wikia.nocookie.net\/__cb20140803101249\/marveldatabase\/images\/thumb\/8\/8d\/Nebula_%28Earth-199999%29.jpg\/200px-0%2C1714%2C0%2C1714-Nebula_%28Earth-199999%29.jpg"
-				}
-			},
-			{
-				"name": "Ronan",
-				"meta": {
-					"relation": "Characters > Enemies",
-					"type": "character",
-					"id": "716128",
-					"img": "http:\/\/img1.wikia.nocookie.net\/__cb20140803132619\/marveldatabase\/images\/thumb\/a\/a7\/Ronan_%28Earth-199999%29_002.jpg\/200px-0%2C300%2C0%2C300-Ronan_%28Earth-199999%29_002.jpg"
-				}
-			},
+
 			{
 				"name": "Thanos",
 				"meta": {
@@ -80,10 +92,10 @@
 		]
 	},
 	{
-		"name": "Equipment",
+		"name": "Weapons",
 		"meta": {
 			"locked": true,
-			"img": "images/equipment.png"
+			"img": "images/weapon.png"
 		},
 		"children": [
 			{
