@@ -25,7 +25,7 @@
 
 	},
 	{
-		"name": "Actor",
+		"name": "Portrayed by",
 		"meta": {
 			"isType": true,
 			"locked": true,
@@ -50,8 +50,6 @@
 			"img": "images/movie.png"
 		},"children": []
 
-	},
-
-
+	}
 ]
 }

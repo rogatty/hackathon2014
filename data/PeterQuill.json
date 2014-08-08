@@ -106,29 +106,12 @@
 					"id": "586548",
 					"img": "http:\/\/img4.wikia.nocookie.net\/__cb20140626202558\/marveldatabase\/images\/thumb\/d\/d7\/Element_Gun_from_Guardians_of_the_Galaxy_Vol_3_16_001.jpg\/200px-92%2C310%2C0%2C217-Element_Gun_from_Guardians_of_the_Galaxy_Vol_3_16_001.jpg"
 				}
-			},
-			{
-				"name": "Guardians of the Galaxy: Awesome Mix Vol. 1",
-				"meta": {
-					"relation": "Equipment > Weapon",
-					"type": "weapon",
-					"id": "2233",
-					"img": null
-				}
-			},
-			{
-				"name": "Translator Implant",
-				"meta": {
-					"relation": "Equipment > Weapon",
-					"type": "weapon",
-					"id": "750637",
-					"img": null
-				}
 			}
+
 		]
 	},
 	{
-		"name": "Actors",
+		"name": "Portrayed by",
 		"meta": {
 			"locked": true,
 			"img": "images/actor.png"
@@ -149,7 +132,7 @@
 					"relation": "Actors > Created by",
 					"type": "character",
 					"id": "439809",
-					"img": null
+					"img": "http://img1.wikia.nocookie.net/__cb20130517181552/marveldatabase/images/3/33/Steve_Gan.jpg"
 				}
 			}
 		]
