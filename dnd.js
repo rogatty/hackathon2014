@@ -382,6 +382,7 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 		var rect = nodeEnter.append("rect")
 			.attr('class', 'nodeCircle')
 			.attr("width", tileWidth)
+			//.attr("y",-100)
 			.attr("height", tileHeight)
 			.style("fill", function (d) {
 				return d._children ? "lightsteelblue" : "#fff";
@@ -483,14 +484,15 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 		// Enter any new links at the parent's previous position.
 		link.enter().insert("path", "g")
 			.attr("class", "link")
+			.attr("x",100)
 			.attr("d", function (d) {
 				var o = {
 					x: source.x0,
 					y: source.y0
 				};
 				var o2 = {
-					x: source.x0+100,
-					y: source.y0+100
+					x: source.x0,
+					y: source.y0
 				};
 				return diagonal({
 					source: o,
@@ -511,13 +513,10 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 					x: source.x,
 					y: source.y
 				};
-				var o2 = {
-					x: source.x+100,
-					y: source.y+100
-				};
+
 				return diagonal({
 					source: o,
-					target: o2
+					target: o
 				});
 			})
 			.remove();

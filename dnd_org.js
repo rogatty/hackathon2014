@@ -15,7 +15,9 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 	var duration = 750;
 	var root;
 	var tileWidth = 100;
+	var tileXOffset = tileWidth/2
 	var tileHeight = 120;
+	var tileYOffset = -(tileHeight/2)
 	var tileImageWidth = 90;
 	var tileImageHeight = 90;
 
@@ -365,7 +367,7 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 		// Set widths between levels based on tile size.
 		nodes.forEach(function (d) {
 			d.y = (d.depth * tileHeight * 4);
-			d.x = d.x * tileWidth / 8;
+			d.x = (d.x * tileHeight/15)  ;
 		});
 
 		// Update the nodes…
@@ -386,6 +388,8 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 		var rect = nodeEnter.append("rect")
 			.attr('class', 'nodeCircle')
 			.attr("width", tileWidth)
+			.attr('x',tileXOffset)
+			.attr('y',tileYOffset)
 			.attr("height", tileHeight)
 			.style("fill", function (d) {
 				return d._children ? "lightsteelblue" : "#fff";
@@ -399,8 +403,8 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 
 		nodeEnter.append('text')
 			.attr('class', 'nodeText')
-			.attr('x', 5)
-			.attr('y', 110)
+			.attr('x', 5 + tileXOffset)
+			.attr('y', 110 + tileYOffset)
 			.attr('text-anchor', 'start')
 			.text(function (d) {
 				if (d.name.length > 15) {
@@ -413,8 +417,8 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 			.attr('xlink:href', function (d) {
 				return d.meta.img;
 			})
-			.attr('x', 5)
-			.attr('y', 5)
+			.attr('x', 5 + tileXOffset)
+			.attr('y', 5 + tileYOffset)
 			.attr('width', tileImageWidth)
 			.attr('height', tileImageHeight);
 
