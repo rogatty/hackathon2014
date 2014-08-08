@@ -73,7 +73,8 @@ function initSearch() {
 		}).on("select2-selecting", function (x) {
 			console.log("CHANGED")
 			console.log(x)
-			x.preventDefault()
+			x.preventDefault();
+			$('#searchModal').trigger('reveal:close');
 		});
 
 		searchInitialized = true;
