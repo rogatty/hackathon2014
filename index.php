@@ -1,8 +1,8 @@
 <?php
-header("Access-Control-Allow-Origin: http://marvel.wikia.com");
-header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
-header("Access-Control-Allow-Headers: X-PINGOTHER");
-header("Access-Control-Max-Age: 1728000");
+	header("Access-Control-Allow-Origin: http://marvel.wikia.com");
+	header("Access-Control-Allow-Methods: POST, GET, OPTIONS");
+	header("Access-Control-Allow-Headers: X-PINGOTHER");
+	header("Access-Control-Max-Age: 1728000");
 ?>
 <!DOCTYPE html>
 <meta charset="utf-8">
@@ -50,7 +50,7 @@ header("Access-Control-Max-Age: 1728000");
 </style>
 <script src="jquery-1.10.2.min.js"></script>
 <script src="d3.min.js"></script>
-<script src="dnd.js"></script>
+<script src="dnd_org.js"></script>
 <body>
 <div id="tree-container"></div>
 </body>
