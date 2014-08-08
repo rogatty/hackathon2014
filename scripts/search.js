@@ -46,29 +46,36 @@ var articles = [
 ]
 
 function format(x) {
-
-	return "<table><tr><td><img style='width:80px;height:80px' src='" + x.item.img+ "'/></td><td><b>"+x.text+"</b><br/><br/> <i>" + x.item.type +"</i></td></tr></table>"
+	return "<table><tr><td><img style='width:80px;height:80px' src='" + x.item.img + "'/></td><td><b>" + x.text + "</b><br/><br/> <i>" + x.item.type + "</i></td></tr></table>"
 }
-$("#myselect").select2({
-	minimumInputLength: 1,
-	query: function (query) {
-		var data = {results: []}, i, j, s;
-		for ( k in articles ) {
-			var item = articles[k];
-			if(item.title.toLowerCase().indexOf(query.term.toLowerCase() ) > -1 ){
-				data.results.push({id: query.term + i, text: item.title, item:item});
+
+var searchInitialized = false;
+function initSearch() {
+	if (!searchInitialized) {
+		$("#myselect").select2({
+			minimumInputLength: 1,
+			query: function (query) {
+				var data = {results: []}, i;
+				for (var k in articles) {
+					var item = articles[k];
+					if (item.title.toLowerCase().indexOf(query.term.toLowerCase()) > -1) {
+						data.results.push({id: query.term + i, text: item.title, item: item});
+					}
+				}
+				query.callback(data);
+			},
+			formatResult: format,
+			formatSelection: format,
+
+			escapeMarkup: function (m) {
+				return m;
 			}
+		}).on("select2-selecting", function (x) {
+			console.log("CHANGED")
+			console.log(x)
+			x.preventDefault()
+		});
 
-
-		}
-		query.callback(data);
-	},
-	formatResult: format,
-	formatSelection: format,
-
-	escapeMarkup: function(m) { return m; }
-}).on("select2-selecting",function(x){
-	console.log("CHANGED")
-	console.log(x)
-	x.preventDefault()
-});
+		searchInitialized = true;
+	}
+}
