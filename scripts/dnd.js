@@ -373,7 +373,8 @@ treeJSON = d3.json("data/PeterQuill.json", function(error, treeData) {
 		root.children.push($.extend({}, addTile));
 	}
 
-	function update(source) {
+	function update(source, firstRun) {
+		firstRun = firstRun || false;
 
 		// Compute the new height, function counts total children of root node and sets tree height accordingly.
 		// This prevents the layout looking squashed when new nodes are made visible or looking sparse when nodes are removed
@@ -564,6 +565,15 @@ treeJSON = d3.json("data/PeterQuill.json", function(error, treeData) {
 			d.x0 = d.x;
 			d.y0 = d.y;
 		});
+
+		if (firstRun) {
+			nodes.forEach(function (d) {
+				if (d.depth === 1) {
+					toggleChildren(d);
+				}
+			});
+			update(source);
+		}
 	}
 
 	// Append a group which holds all nodes and which the zoom Listener can act upon.
@@ -576,6 +586,6 @@ treeJSON = d3.json("data/PeterQuill.json", function(error, treeData) {
 
 	// Layout the tree initially and center on the root node.
 	addCreationTiles(root);
-	update(root);
+	update(root, true);
 	centerNode(root);
 });
