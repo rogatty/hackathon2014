@@ -51,7 +51,8 @@ function format(x) {
 
 var searchInitialized = false;
 function initSearch() {
-	if (!searchInitialized) {
+
+	if (!false) {
 		$("#myselect").select2({
 			minimumInputLength: 1,
 			query: function (query) {
@@ -71,9 +72,18 @@ function initSearch() {
 				return m;
 			}
 		}).on("select2-selecting", function (x) {
-			console.log("CHANGED")
-			console.log(x)
 			x.preventDefault();
+			var obj = x.object.item
+			currentNodeToAddTo.children.unshift({
+				"name": obj.title,
+				"meta":{
+					"type":"",
+					"id":obj.id,
+					"img":obj.img
+				}
+			})
+
+			$("#myselect").select2("close");
 			$('#searchModal').trigger('reveal:close');
 		});
 
