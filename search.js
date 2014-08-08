@@ -70,4 +70,5 @@ $("#myselect").select2({
 }).on("select2-selecting",function(x){
 	console.log("CHANGED")
 	console.log(x)
+	x.preventDefault()
 });
