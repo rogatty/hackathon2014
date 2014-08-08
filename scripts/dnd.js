@@ -333,7 +333,7 @@ treeJSON = d3.json("data/PeterQuill.json", function(error, treeData) {
 		if (d3.event.defaultPrevented) return; // click suppressed
 
 		if (d.meta.add) {
-			window.currentNodeToAddTo = d;
+			window.currentNodeToAddTo = d.parent;
 			$('#searchModal').reveal();
 			initSearch();
 			return;
