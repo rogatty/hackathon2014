@@ -335,6 +335,9 @@ treeJSON = d3.json("data/PeterQuill.json", function(error, treeData) {
 		if (d.meta.add) {
 			window.currentNodeToAddTo = d.parent;
 			$('#searchModal').reveal();
+			$('#searchModal').on('reveal:close', function () {
+				update(d);
+			});
 			initSearch();
 			return;
 		}
