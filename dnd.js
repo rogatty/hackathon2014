@@ -1,4 +1,4 @@
-treeJSON = d3.json("marvell_1.json", function(error, treeData) {
+treeJSON = d3.json("data/PeterQuill.json", function(error, treeData) {
 
 	// Calculate total nodes
 	var totalNodes = 0;
@@ -57,6 +57,7 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 	// sort the tree according to the node names
 
 	function sortTree() {
+		return; //TODO temporary disabled
 		tree.sort(function (a, b) {
 			return b.name.toLowerCase() < a.name.toLowerCase() ? 1 : -1;
 		});
@@ -335,7 +336,19 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 		centerNode(d);
 	}
 
+	function addCreationTiles(root) {
+		root.children.forEach(function (relationNode) {
+			relationNode.children.push({
+				name: 'Create new',
+				meta: {
+					img: 'images/create.png'
+				}
+			});
+		});
+	}
+
 	function update(source) {
+
 		// Compute the new height, function counts total children of root node and sets tree height accordingly.
 		// This prevents the layout looking squashed when new nodes are made visible or looking sparse when nodes are removed
 		// This makes the layout more consistent.
@@ -407,7 +420,7 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 
 		nodeEnter.append('image')
 			.attr('xlink:href', function (d) {
-				return d.meta.img;
+				return (d.meta && d.meta.img) ? d.meta.img : null;
 			})
 			.attr('x', 5)
 			.attr('y', 5)
@@ -536,6 +549,7 @@ treeJSON = d3.json("marvell_1.json", function(error, treeData) {
 	root.y0 = 0;
 
 	// Layout the tree initially and center on the root node.
+	addCreationTiles(root);
 	update(root);
 	centerNode(root);
 });

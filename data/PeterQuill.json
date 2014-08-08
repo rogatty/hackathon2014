@@ -1,16 +1,17 @@
-{"name": "Peter Quill",
+{
+	"name": "Peter Quill",
 	"meta": {
-	"type": "character",
-	"id": "716143",
-	"img":"http://img1.wikia.nocookie.net/__cb20140627005750/marveldatabase/images/thumb/d/dd/Peter_Quill_%28Earth-199999%29_002.jpg/200px-0%2C3558%2C0%2C3558-Peter_Quill_%28Earth-199999%29_002.jpg"
-	,"locked":true
-}, "children": [
+		"type": "character",
+		"id": "716143",
+		"img": "http://img1.wikia.nocookie.net/__cb20140627005750/marveldatabase/images/thumb/d/dd/Peter_Quill_%28Earth-199999%29_002.jpg/200px-0%2C3558%2C0%2C3558-Peter_Quill_%28Earth-199999%29_002.jpg",
+		"locked": true
+	}, "children": [
 	{
 		"name": "Characters",
 		"meta": {
 			"isType": true,
 			"locked": true,
-			"img":"character.png"
+			"img": "images/character.png"
 		},
 		"children": [
 			{
@@ -81,8 +82,8 @@
 	{
 		"name": "Equipment",
 		"meta": {
-			"locked": true
-			,"img":"equipment.png"
+			"locked": true,
+			"img": "images/equipment.png"
 		},
 		"children": [
 			{
@@ -118,7 +119,7 @@
 		"name": "Actors",
 		"meta": {
 			"locked": true,
-			"img":"actor.png"
+			"img": "images/actor.png"
 		},
 		"children": [
 			{
@@ -141,4 +142,5 @@
 			}
 		]
 	}
-]}
+]
+}

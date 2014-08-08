@@ -1,4 +1,4 @@
-treeJSON = d3.json("marvell_1.json", function(error, treeData) {
+treeJSON = d3.json("PeterQuill.json", function(error, treeData) {
 
 	// Calculate total nodes
 	var totalNodes = 0;
