@@ -21,7 +21,7 @@ var articles = [
     {
         "id": "7152",
         "type": "Person",
-        "img": "http://img2.wikia.nocookie.net/__cb20111122032248/marveldatabase/images/thumb/6/6a/FF_Vol_1_15_Textless.jpg/200px-0%2C900%2C0%2C900-FF_Vol_1_15_Textless.jpg",
+        "img": "images/zoe.jpg",
         "title": "Zoe Saldana"
     },
     {
@@ -34,7 +34,7 @@ var articles = [
         "id": "31560",
         "type": "Weapon",
         "img": "http://img2.wikia.nocookie.net/__cb20071102223816/marveldatabase/images/thumb/9/93/Godslayer.jpg/200px-0%2C320%2C0%2C320-Godslayer.jpg",
-        "title": "Godsllayer"
+        "title": "Godslayer"
     },
     {
         "id": "309275",
@@ -87,6 +87,7 @@ function initSearch(parentNode, callback) {
 
         searchSelect.select2("close");
         searchModal.trigger('reveal:close');
+        searchSelect.off('select2-selecting');
         callback(newNode);
     });
 }

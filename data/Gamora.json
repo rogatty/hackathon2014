@@ -3,18 +3,9 @@
 	"meta": {
 		"type": "character",
 		"id": "716143",
-		"img": "http://img1.wikia.nocookie.net/__cb20130612214135/marveldatabase/images/thumb/1/11/Guardians_of_the_Galaxy_Vol_3_4_Campbell_Variant_Textless.jpg/200px-0%2C778%2C0%2C778-Guardians_of_the_Galaxy_Vol_3_4_Campbell_Variant_Textless.jpg",
+		"img": "http:\/\/img2.wikia.nocookie.net\/__cb20140720030528\/marveldatabase\/images\/thumb\/4\/4a\/Gamora_%28Earth-199999%29_002.jpg\/200px-0%2C1714%2C0%2C1714-Gamora_%28Earth-199999%29_002.jpg",
 		"locked": true
 	}, "children": [
-	{
-		"name": "Family",
-		"meta": {
-			"isType": true,
-			"locked": true,
-			"img": "images/family.png"
-		},"children": []
-
-	},
 	{
 		"name": "Created by",
 		"meta": {

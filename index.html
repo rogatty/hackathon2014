@@ -21,18 +21,11 @@ $('#WikiaArticle').prepend('<div><iframe src="http://dev-suchy/static.html" styl
 			font-family: sans-serif;
 		}
 
-		.link {
+		.link, .templink {
 			fill: none;
 			stroke: #ccc;
 			stroke-width: 1.5px;
 		}
-
-		.templink {
-			fill: none;
-			stroke: red;
-			stroke-width: 3px;
-		}
-
 		.ghostCircle.show {
 			display: block;
 		}
@@ -54,6 +47,9 @@ $('#WikiaArticle').prepend('<div><iframe src="http://dev-suchy/static.html" styl
 	<script src="scripts/select/select2.js"></script>
 	<script src="scripts/jquery.reveal.js"></script>
 	<script src="scripts/search.js"></script>
+    <script type="application/javascript">
+        loadTree(window.location.hash.substr(1));
+    </script>
 </head>
 <body style="overflow: hidden;">
 <div id="tree-container"></div>
@@ -68,8 +64,34 @@ $('#WikiaArticle').prepend('<div><iframe src="http://dev-suchy/static.html" styl
     <h1>Add</h1>
 
     <select id="relationSelect" style="width:400px">
-        <option>ksz</option>
-        <option>psz</option>
+        <option>Ally</option>
+        <option>Alternative version</option>
+        <option>Appeared in comics</option>
+        <option>Appeared in games</option>
+        <option>Appeared in movies</option>
+        <option>Born on</option>
+        <option>Business partner</option>
+        <option>Created by</option>
+        <option>Director</option>
+        <option>Enemy</option>
+        <option>Family</option>
+        <option>Former member of</option>
+        <option>Franchise</option>
+        <option>Former Owner</option>
+        <option>Home</option>
+        <option>Leader</option>
+        <option>Master</option>
+        <option>Member of</option>
+        <option>Member of species</option>
+        <option>Owner of</option>
+        <option>Parts of</option>
+        <option>Portrayed by</option>
+        <option>Producer</option>
+        <option>Teammate</option>
+        <option>Universe</option>
+        <option>Visited</option>
+        <option>Voiced by</option>
+        <option>Writer</option>
     </select>
     <a class="close-reveal-modal">&#215;</a>
 </div>
