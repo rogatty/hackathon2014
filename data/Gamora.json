@@ -7,15 +7,6 @@
 		"locked": true
 	}, "children": [
 	{
-		"name": "Created by",
-		"meta": {
-			"isType": true,
-			"locked": true,
-			"img": "images/created-by.png"
-		},"children": []
-
-	},
-	{
 		"name": "Portrayed by",
 		"meta": {
 			"isType": true,

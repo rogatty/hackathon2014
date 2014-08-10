@@ -307,7 +307,7 @@ loadTree = function (character) {
             y = -source.y0;
             x = -source.x0;
             x = x * scale + viewerWidth / 2;
-            y = y * scale + viewerHeight / 2 - 200; //TODO magic number
+            y = y * scale + viewerHeight / 2 - 130; //TODO magic number
             d3.select('g').transition()
                 .duration(duration)
                 .attr("transform", "translate(" + x + "," + y + ")scale(" + scale + ")");
@@ -342,7 +342,7 @@ loadTree = function (character) {
                 } else {
                     initSearch(d.parent, function (createdNode) {
                         update(d);
-                        centerNode(createdNode);
+                        centerNode(d.parent);
                     });
                 }
 

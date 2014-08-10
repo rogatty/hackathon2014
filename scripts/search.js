@@ -93,10 +93,11 @@ function initSearch(parentNode, callback) {
 }
 
 function initRelation(parentNode, callback) {
-    var relationModal = $('#relationModal');
+    var relationModal = $('#relationModal'),
+        relationSelect = relationModal.find('#relationSelect');
     relationModal.reveal();
 
-    relationModal.find('#relationSelect').on('change', function () {
+    relationSelect.on('change', function () {
         var newNode = {
             name: 'Family',
             meta: {
