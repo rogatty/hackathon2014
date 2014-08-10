@@ -306,7 +306,7 @@ treeJSON = d3.json("data/PeterQuill.json", function(error, treeData) {
 		y = -source.y0;
 		x = -source.x0;
 		x = x * scale + viewerWidth / 2;
-		y = y * scale + viewerHeight / 2;
+		y = y * scale + viewerHeight / 2 - 200; //TODO magic number
 		d3.select('g').transition()
 			.duration(duration)
 			.attr("transform", "translate(" + x + "," + y + ")scale(" + scale + ")");
@@ -333,13 +333,18 @@ treeJSON = d3.json("data/PeterQuill.json", function(error, treeData) {
 		if (d3.event.defaultPrevented) return; // click suppressed
 
 		if (d.meta.add) {
-			window.currentNodeToAddTo = d.parent;
-			var searchModal = $('#searchModal');
-			searchModal.reveal();
-			searchModal.on('reveal:close', function () {
-				update(d);
-			});
-			initSearch();
+            if (d.depth === 1) {
+                initRelation(d.parent, function (createdNode) {
+                    update(d);
+                    centerNode(createdNode);
+                });
+            } else {
+                initSearch(d.parent, function (createdNode) {
+                    update(d);
+                    centerNode(createdNode);
+                });
+            }
+			
 			return;
 		}
 

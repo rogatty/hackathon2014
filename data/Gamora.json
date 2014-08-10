@@ -41,15 +41,6 @@
 			"img": "images/friends.png"
 		},"children": []
 
-	},
-	{
-		"name": "Movies",
-		"meta": {
-			"isType": true,
-			"locked": true,
-			"img": "images/movie.png"
-		},"children": []
-
 	}
 ]
 }
