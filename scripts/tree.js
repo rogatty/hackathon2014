@@ -1,5 +1,5 @@
 loadTree = function (character) {
-    treeJSON = d3.json('data/' + character + '.json', function(error, treeData) {
+    var treeJSON = d3.json('data/' + character + '.json', function(error, treeData) {
 
         // Calculate total nodes
         var totalNodes = 0;
